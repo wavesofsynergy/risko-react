@@ -38,11 +38,40 @@ function App() {
             <option key={key} value={key}>{key}</option>
           ))}
         </select>
-        <input type="number" className="input" placeholder="Balance USD" onChange={e => setBalance(e.target.value)} />
-        <input type="number" className="input" placeholder="Riesgo %" onChange={e => setRisk(e.target.value)} />
-        <input type="number" className="input" placeholder="Stop Loss (Pips)" onChange={e => setStopLoss(e.target.value)} />
+        <input
+          type="number"
+          className="input"
+          placeholder="Balance USD"
+          onChange={e => setBalance(e.target.value)}
+        />
+        <input
+          type="number"
+          className="input"
+          placeholder="Riesgo %"
+          onChange={e => setRisk(e.target.value)}
+        />
+        <input
+          type="number"
+          className="input"
+          placeholder="Stop Loss (Pips)"
+          onChange={e => setStopLoss(e.target.value)}
+        />
         <button className="btn" onClick={calcularLotaje}>execute</button>
       </div>
+
       <div className="result">
         <p className="result-label">Calculated <strong>Lot</strong></p>
-        <p class
+        <p className="lot">{lotSize}</p>
+      </div>
+
+      <p className="disclaimer">
+        Esta herramienta es solo de uso informativo y no representa asesoramiento financiero.
+        El cálculo del lotaje no garantiza resultados reales.
+      </p>
+      <p className="credit">By <span>@veneciadulcinea</span></p>
+    </div>
+  );
+}
+
+export default App;
+
