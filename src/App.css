@@ -1,32 +1,25 @@
-body {
-  margin: 0;
+.app {
   font-family: 'Poppins', sans-serif;
   background-color: #0c0819;
-  color: #fff;
+  color: white;
+  min-height: 100vh;
   text-align: center;
+  padding: 2rem 1rem;
 }
 
 .logo {
   width: 180px;
-  margin: 80px auto 20px;
-  display: block;
-}
-
-.container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 10px;
+  margin-bottom: 1.5rem;
 }
 
 .form-box {
   background-color: #1a0d2d;
   border-radius: 20px;
   padding: 20px;
-  margin-top: 20px;
-  box-sizing: border-box;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-/* Inputs y select */
 .input,
 select.input,
 button {
@@ -41,84 +34,49 @@ button {
   color: white;
   font-size: 16px;
   font-weight: 500;
-  box-sizing: border-box;
 }
 
 input::placeholder {
   color: #ccafff;
-  opacity: 0.8;
-}
-
-input:focus,
-select:focus {
-  outline: none;
-  border-color: #4601fa;
-}
-
-select.input option {
-  background-color: #1a0d2d;
-  color: white;
-}
-
-.input:focus,
-select:focus {
-  outline: none;
-  border-color: #4601fa;
 }
 
 .btn {
-  background-color: #4601fa;
-  color: white;
-  font-weight: bold;
+  background-color: #5d00ff;
+  font-weight: 700;
   text-transform: lowercase;
   cursor: pointer;
   border: none;
 }
 
 .result {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-top: 2rem;
-  background-color: #1a0d2d; /* color contenedor */
+  background-color: #1b0e35;
   padding: 1.5rem;
   border-radius: 15px;
-  /* Quitamos borde visible */
-  border: none;
-  max-width: 350px;
+  max-width: 300px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Texto encima del resultado */
 .result-label {
   font-size: 1rem;
   color: white;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
   font-weight: 500;
-  text-align: center;
 }
 
-/* Número del lotaje */
 .lotaje {
   font-size: 2rem;
   font-weight: 700;
   color: white;
-  background-color: transparent;
-  border: none;
-  text-align: center;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 300px; /* 🔁 igual al botón */
-  padding: 0.4rem 0;
-  box-sizing: border-box;
+  margin: 0;
 }
 
 .disclaimer {
   font-size: 10px;
   color: #ffcc00;
   margin: 20px auto;
-  max-width: 400px;
+  max-width: 320px;
   line-height: 1.5;
 }
 
@@ -126,64 +84,4 @@ select:focus {
   font-size: 12px;
   margin-top: 10px;
   color: #ccafff;
-}
-
-/* Tipografía global */
-body {
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Etiqueta sobre el resultado */
-.result-label {
-  font-size: 1rem;
-  color: white;
-  margin-bottom: 0.4rem;
-  text-align: center;
-  font-weight: 500;
-}
-
-/* Resultado de lotaje */
-.lotaje {
-  font-size: 1.8rem;
-  font-weight: 700; /* Poppins Bold */
-  background-color: #1b0e35;
-  color: #ffffff;
-  padding: 0.4rem 1.2rem;
-  border-radius: 10px;
-  border: 1px solid #ccafff;
-  text-align: center;
-  max-width: 320px;
-  margin: 0 auto;
-  line-height: 1.2;
-}
-
-/* Botón Execute */
-button {
-  font-weight: 700;
-  font-size: 1rem;
-  background-color: #5d00ff;
-  color: white;
-  padding: 0.8rem;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  max-width: 300px; /* <--- Controla el ancho máximo */
-  display: block;
-  margin: 0 auto;
-}
-
-button {
-  width: 100%;
-  max-width: 300px;
-  font-weight: 700;
-  font-size: 1rem;
-  background-color: #5d00ff;
-  color: white;
-  padding: 0.8rem;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
 }
