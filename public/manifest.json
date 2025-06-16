@@ -1,0 +1,9 @@
+{
+  "short_name": "risko",
+  "name": "risko - Lot Size Calculator",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#4601fa",
+  "background_color": "#0c0819"
+}
