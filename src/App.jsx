@@ -5,11 +5,10 @@ const pipValues = {
   XAUUSD: 1,
   DJIUSD: 1,
   SPXUSD: 1,
-  NXDUSD: 1
+  NXDUSD: 1,
   EURUSD: 10,
   GBPAUD: 10,
   USDJPY: 9.2
-  
 };
 
 function App() {
