@@ -1,28 +1,38 @@
-.app {
+/* Estilos base */
+body {
+  margin: 0;
   font-family: 'Poppins', sans-serif;
   background-color: #0c0819;
-  color: white;
-  min-height: 100vh;
+  color: #fff;
   text-align: center;
-  padding: 2rem 1rem;
 }
 
+/* Logo */
 .logo {
   width: 180px;
-  margin-bottom: 1.5rem;
+  margin: 80px auto 20px;
+  display: block;
 }
 
+/* Contenedor general */
+.app {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Caja del formulario */
 .form-box {
   background-color: #1a0d2d;
   border-radius: 20px;
   padding: 20px;
-  max-width: 400px;
-  margin: 0 auto;
+  margin-top: 20px;
+  box-sizing: border-box;
 }
 
+/* Inputs y select */
 .input,
-select.input,
-button {
+select.input {
   display: block;
   width: 100%;
   max-width: 300px;
@@ -34,52 +44,91 @@ button {
   color: white;
   font-size: 16px;
   font-weight: 500;
+  box-sizing: border-box;
 }
 
 input::placeholder {
   color: #ccafff;
+  opacity: 0.8;
 }
 
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #4601fa;
+}
+
+select.input option {
+  background-color: #1a0d2d;
+  color: white;
+}
+
+/* Botón ejecutar */
 .btn {
   background-color: #5d00ff;
-  font-weight: 700;
+  color: white;
+  font-weight: bold;
   text-transform: lowercase;
   cursor: pointer;
   border: none;
+  font-size: 1rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
 }
 
+/* Resultado */
 .result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 2rem;
-  background-color: #1b0e35;
+  background-color: #1a0d2d;
   padding: 1.5rem;
   border-radius: 15px;
-  max-width: 300px;
+  max-width: 350px;
   margin-left: auto;
   margin-right: auto;
+  border: none;
 }
 
+/* Etiqueta sobre el resultado */
 .result-label {
   font-size: 1rem;
   color: white;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   font-weight: 500;
+  text-align: center;
 }
 
-.lotaje {
+/* Resultado del lotaje */
+.lot {
   font-size: 2rem;
   font-weight: 700;
   color: white;
-  margin: 0;
+  background-color: #1b0e35;
+  border: 1px solid #ccafff;
+  border-radius: 10px;
+  padding: 0.4rem 1.2rem;
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
+  line-height: 1.2;
 }
 
+/* Disclaimer */
 .disclaimer {
   font-size: 10px;
   color: #ffcc00;
   margin: 20px auto;
-  max-width: 320px;
+  max-width: 400px;
   line-height: 1.5;
 }
 
+/* Firma */
 .credit {
   font-size: 12px;
   margin-top: 10px;
