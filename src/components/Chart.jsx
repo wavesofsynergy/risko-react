@@ -1,32 +1,45 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-export default function Chart({ symbol = 'XAUUSD' }) {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js";
-    script.type = "text/javascript";
-    script.async = true;
-    script.innerHTML = JSON.stringify({
-      symbols: [[symbol]],
-      chartOnly: false,
-      width: "100%",
-      height: "300",
-      locale: "en",
-      colorTheme: "dark",
-      autosize: true,
-      showVolume: false,
-      hideDateRanges: false,
-      scalePosition: "right",
-      scaleMode: "Normal",
-      fontFamily: "Poppins",
-      noTimeScale: false,
-      backgroundColor: "#0c0819"
-    });
+const tradingViewSymbols = {
+  XAUUSD: 'OANDA:XAUUSD',
+  XAUCAD: 'OANDA:XAUCAD',
+  EURUSD: 'OANDA:EURUSD',
+  EURAUD: 'OANDA:EURAUD',
+  EURCAD: 'OANDA:EURCAD',
+  USDJPY: 'OANDA:USDJPY',
+  GBPAUD: 'OANDA:GBPAUD',
+  GBPCAD: 'OANDA:GBPCAD',
+  DJIUSD: 'CAPITALCOM:DJI',
+  SPXUSD: 'CAPITALCOM:SPX',
+  NXDUSD: 'CAPITALCOM:NDX',
+  BTCUSD: 'BINANCE:BTCUSDT',
+  ETHUSD: 'BINANCE:ETHUSDT',
+  ADAUSD: 'BINANCE:ADAUSDT',
+  BNBUSD: 'BINANCE:BNBUSDT',
+  LTCUSD: 'BINANCE:LTCUSDT',
+  XRPUSD: 'BINANCE:XRPUSDT',
+  SOLUSD: 'BINANCE:SOLUSDT',
+  DOGEUSD: 'BINANCE:DOGEUSDT',
+  DOTUSD: 'BINANCE:DOTUSDT',
+  LINKUSD: 'BINANCE:LINKUSDT',
+  UNIUSD: 'BINANCE:UNIUSDT'
+};
 
-    const container = document.getElementById("tv-widget");
-    container.innerHTML = ""; // Limpia si hay anterior
-    container.appendChild(script);
-  }, [symbol]);
+const Chart = ({ symbol }) => {
+  const tvSymbol = tradingViewSymbols[symbol] || 'OANDA:EURUSD';
+  return (
+    <div className="chart-container">
+      <iframe
+        title="TradingView Chart"
+        src={`https://s.tradingview.com/widgetembed/?symbol=${tvSymbol}&interval=60&theme=dark`}
+        width="100%"
+        height="400"
+        frameBorder="0"
+        allowTransparency="true"
+        scrolling="no"
+      ></iframe>
+    </div>
+  );
+};
 
-  return <div id="tv-widget" style={{ maxWidth: 400, margin: "2rem auto" }} />;
-}
+export default Chart;

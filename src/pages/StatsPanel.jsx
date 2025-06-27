@@ -1,24 +1,18 @@
+// src/pages/StatsPanel.jsx
 import React from 'react';
 import './StatsPanel.css';
 
-const StatsPanel = ({ rr, profit }) => {
+export default function StatsPanel({ rr, profit }) {
   return (
-    <div className="stats-panel">
-      <h2 className="title">Resultados</h2>
-
-      <div className="stats-box">
-        <p className="label">Riesgo / Beneficio</p>
-        <p className="value small">{rr}</p>
+    <div className="row-results">
+      <div className="mini-result">
+        <span className="mini-label">RR</span>
+        <span className="mini-value">{rr}</span>
       </div>
-
-      <div className="stats-box">
-        <p className="label">Potencial Ganancia</p>
-        <p className="value small">${profit}</p>
+      <div className="mini-result">
+        <span className="mini-label">Profit</span>
+        <span className="mini-value">${profit}</span>
       </div>
-
-      <p className="disclaimer">Valores estimados según los datos ingresados.</p>
     </div>
   );
-};
-
-export default StatsPanel;
+}
