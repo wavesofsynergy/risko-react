@@ -1,28 +1,17 @@
 // src/serviceWorkerRegistration.js
-import { register } from 'register-service-worker';
 
-if (process.env.NODE_ENV === 'production') {
-  register('/service-worker.js', {
-    ready() {
-      console.log('App ready to work offline.');
-    },
-    registered() {
-      console.log('Service worker registered.');
-    },
-    cached() {
-      console.log('Content cached.');
-    },
-    updatefound() {
-      console.log('Update found.');
-    },
-    updated() {
-      console.log('New content available; please refresh.');
-    },
-    offline() {
-      console.log('App running in offline mode.');
-    },
-    error(error) {
-      console.error('SW registration error:', error);
-    },
-  });
+// Este archivo permite convertir tu app en una PWA.
+export function register() {
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker
+        .register('/service-worker.js')
+        .then((registration) => {
+          console.log('Service Worker registrado: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('Service Worker falló: ', registrationError);
+        });
+    });
+  }
 }
