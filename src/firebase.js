@@ -4,11 +4,11 @@ import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: "TU_API_KEY",
-  authDomain: "TU_DOMINIO",
-  projectId: "TU_PROJECT_ID",
-  storageBucket: "TU_BUCKET",
-  messagingSenderId: "TU_SENDER_ID",
-  appId: "TU_APP_ID"
+  authDomain: "TU_DOMINIO.firebaseapp.com",
+  projectId: "risko-app",
+  storageBucket: "risko-app.appspot.com",
+  messagingSenderId: "XXXXXX",
+  appId: "1:XXXXXXXX:web:XXXXXXX"
 };
 
 const app = initializeApp(firebaseConfig);

@@ -1,21 +1,23 @@
+// src/pages/Login.jsx
 import React from 'react';
-import { auth } from '../firebase';
-import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { auth, provider } from '../firebase';
+import { signInWithPopup } from 'firebase/auth';
 
 export default function Login() {
-  const handleGoogleLogin = async () => {
-    const provider = new GoogleAuthProvider();
+  const loginWithGoogle = async () => {
     try {
       await signInWithPopup(auth, provider);
     } catch (error) {
-      console.error(error);
+      console.error('Error al iniciar sesión:', error);
     }
   };
 
   return (
-    <div className="login-box">
-      <h2>Iniciar sesión</h2>
-      <button onClick={handleGoogleLogin} className="btn">Ingresar con Google</button>
+    <div style={{ marginTop: '2rem' }}>
+      <h3>Inicia sesión para guardar tu historial</h3>
+      <button className="btn" onClick={loginWithGoogle}>
+        Iniciar sesión con Google
+      </button>
     </div>
   );
 }

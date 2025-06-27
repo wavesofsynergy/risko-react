@@ -48,7 +48,7 @@ input::placeholder {
   opacity: 0.8;
 }
 
-input:focus,
+.input:focus,
 select:focus {
   outline: none;
   border-color: #4601fa;
@@ -87,47 +87,42 @@ select.input option {
   color: white;
   margin-bottom: 0.6rem;
   font-weight: 500;
-  text-align: center;
 }
 
 .lotaje {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
+  color: white;
   background-color: #1b0e35;
-  color: #ffffff;
-  padding: 0.4rem 1.2rem;
-  border-radius: 10px;
   border: 1px solid #ccafff;
-  text-align: center;
-  max-width: 320px;
+  border-radius: 10px;
+  padding: 0.4rem 1.2rem;
+  max-width: 300px;
   margin: 0 auto;
-  line-height: 1.2;
+  box-sizing: border-box;
 }
 
 .row-results {
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
+  justify-content: space-around;
   margin-top: 1rem;
+  width: 100%;
 }
 
 .mini-result {
-  background-color: #1b0e35;
-  border: 1px solid #ccafff;
-  border-radius: 10px;
-  padding: 0.5rem 1rem;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .mini-label {
-  font-size: 0.8rem;
-  color: #aaa;
+  font-size: 0.9rem;
+  color: #ccafff;
 }
 
 .mini-value {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  color: white;
 }
 
 .disclaimer {
@@ -142,4 +137,17 @@ select.input option {
   font-size: 12px;
   margin-top: 10px;
   color: #ccafff;
+}
+
+.qr-img {
+  width: 140px;
+  margin: 10px auto;
+  display: block;
+}
+
+.donation-box {
+  background-color: #1a0d2d;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-top: 2rem;
 }

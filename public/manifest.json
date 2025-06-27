@@ -1,6 +1,6 @@
 {
-  "short_name": "risko",
-  "name": "risko - Lot Size Calculator",
+  "short_name": "Risko",
+  "name": "Risko - Lot Size Calculator",
   "icons": [
     {
       "src": "logo192.png",
@@ -15,9 +15,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#0c0819",
-  "theme_color": "#5d00ff",
-  "orientation": "portrait-primary",
-  "description": "Calculadora de lotaje para trading",
-  "lang": "es"
+  "theme_color": "#0c0819",
+  "background_color": "#0c0819"
 }
