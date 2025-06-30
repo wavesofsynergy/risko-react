@@ -63,7 +63,7 @@ export default function Home() {
         <div className="container">
           <div className="form-box">
             <select value={asset} onChange={(e) => setAsset(e.target.value)} className="input">
-              <option value="">Select Asset</option>
+              <option value="">Seleccionar Par</option>
               {Object.keys(pipValues).map((key) => (
                 <option key={key} value={key}>{key}</option>
               ))}
@@ -71,7 +71,7 @@ export default function Home() {
             <input type="number" className="input" placeholder="Balance USD" onChange={(e) => setBalance(e.target.value)} />
             <input type="number" className="input" placeholder="Riesgo %" onChange={(e) => setRisk(e.target.value)} />
             <input type="number" className="input" placeholder="Stop Loss (Pips)" onChange={(e) => setStopLoss(e.target.value)} />
-            <button className="btn" onClick={calcularLotaje}>Ejecutar</button>
+            <button className="btn" onClick={calcularLotaje}>ejecutar</button>
           </div>
 
           <div className="result">
@@ -94,11 +94,10 @@ export default function Home() {
           </p>
 
           <p className="credit">By <strong>wos.ai</strong></p>
-          <button className="btn" onClick={() => window.location.href = "/donar"}>Donar</button>
-          <button className="btn logout" onClick={() => signOut(auth)}>Cerrar sesión</button>
+          <button className="btn" onClick={() => window.location.href = "/donar"}>donar</button>
+          <button className="btn logout" onClick={() => signOut(auth)}>cerrar sesión</button>
         </div>
       )}
     </div>
   );
 }
-

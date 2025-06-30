@@ -7,6 +7,10 @@ body {
   min-height: 100vh;
 }
 
+.app {
+  background-color: #0c0819;
+}
+
 .logo {
   width: 180px;
   margin: 60px auto 20px;
@@ -14,7 +18,7 @@ body {
 }
 
 .container {
-  max-width: 320px;
+  max-width: 360px;
   margin: 0 auto;
   padding: 0 16px;
   box-sizing: border-box;
@@ -62,7 +66,6 @@ select.input option {
   background-color: #5d00ff;
   color: white;
   font-weight: bold;
-  text-transform: lowercase;
   cursor: pointer;
   border: none;
   font-size: 16px;
@@ -70,6 +73,7 @@ select.input option {
   border-radius: 10px;
   margin-top: 10px;
   width: 100%;
+  text-transform: none;
 }
 
 .btn.logout {
