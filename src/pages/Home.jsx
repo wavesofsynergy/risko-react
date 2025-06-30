@@ -66,7 +66,7 @@ export default function Home() {
         <Login />
       ) : (
         <>
-          <p className="welcome">Bienvenido, {user.displayName}</p>
+          <p>Bienvenido, {user.displayName}</p>
           <div className="container">
             <div className="form-box">
               <select value={asset} onChange={(e) => setAsset(e.target.value)} className="input">
@@ -78,30 +78,27 @@ export default function Home() {
               <input type="number" className="input" placeholder="Balance USD" onChange={(e) => setBalance(e.target.value)} />
               <input type="number" className="input" placeholder="Riesgo %" onChange={(e) => setRisk(e.target.value)} />
               <input type="number" className="input" placeholder="Stop Loss (Pips)" onChange={(e) => setStopLoss(e.target.value)} />
-              <button className="btn" onClick={calcularLotaje}>execute</button>
+              <button className="btn" onClick={calcularLotaje}>ejecutar</button>
             </div>
 
             <div className="result">
-              <p className="result-label">Calculated <strong>Lot</strong></p>
+              <p className="result-label"><strong>Lotaje</strong> Calculado</p>
               <p className="lotaje">{lotSize}</p>
-              <div className="row-results inline">
-                <div className="mini-result">
-                  <span className="mini-label">RR</span>
-                  <span className="mini-value">{rr}</span>
-                </div>
-                <div className="mini-result">
-                  <span className="mini-label">Profit</span>
-                  <span className="mini-value">${profit}</span>
-                </div>
+              <div className="row-results">
+                <div className="mini-result"><span className="mini-label">RR</span><span className="mini-value">{rr}</span></div>
+                <div className="mini-result"><span className="mini-label">Profit</span><span className="mini-value">${profit}</span></div>
               </div>
             </div>
+
+            <StatsPanel rr={rr} profit={profit} />
 
             <p className="disclaimer">
               Esta herramienta es solo de uso informativo y no representa asesoramiento financiero.
             </p>
+
             <p className="credit">By <strong>wos.ai</strong></p>
-            <button className="btn donate-btn" onClick={() => window.location.href='/donar'}>Donar</button>
-            <button className="btn logout-btn" onClick={() => signOut(auth)}>Cerrar sesión</button>
+            <button className="btn" onClick={() => window.location.href='/donaciones'}>donar</button>
+            <button className="btn-outline" onClick={() => signOut(auth)}>Cerrar sesión</button>
           </div>
         </>
       )}

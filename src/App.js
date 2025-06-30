@@ -1,26 +1,31 @@
 // src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Calculator from './pages/Calculator';
-import ChartPage from './pages/ChartPage';
-import About from './pages/About';
-import Donate from './pages/Donate';
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import ChartView from './pages/ChartView';
+import HowToUse from './pages/HowToUse';
+import Donation from './pages/Donation';
 import './App.css';
+import './pages/StatsPanel.css';
+import './serviceWorkerRegistration';
 
 function App() {
   return (
     <Router>
-      <div className="navbar">
-        <Link to="/" className="nav-link">Calculadora</Link>
-        <Link to="/chart" className="nav-link">TradingView</Link>
-        <Link to="/about" className="nav-link">¿Cómo usar?</Link>
-        <Link to="/donate" className="nav-link">Donar</Link>
-      </div>
+      <nav>
+        <NavLink to="/">Calculadora</NavLink>
+        <NavLink to="/chart">TradingView</NavLink>
+        <NavLink to="/how">¿Cómo usar?</NavLink>
+        <NavLink to="/donar">Donar</NavLink>
+      </nav>
+
       <Routes>
-        <Route path="/" element={<Calculator />} />
-        <Route path="/chart" element={<ChartPage />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/donate" element={<Donate />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/chart" element={<ChartView />} />
+        <Route path="/how" element={<HowToUse />} />
+        <Route path="/donar" element={<Donation />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );
