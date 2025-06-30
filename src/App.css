@@ -179,3 +179,24 @@ select.input option {
   margin: 1rem auto;
   display: block;
 }
+
+/* Barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #1a0d2d;
+  padding: 1rem 0;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.95rem;
+}
+
+.nav-link:hover {
+  color: #ffcc00;
+}

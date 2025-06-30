@@ -4,22 +4,16 @@ import React from 'react';
 export default function About() {
   return (
     <div className="container">
-      <h2>¿Cómo se calcula el lotaje?</h2>
+      <h2>¿Cómo se usa Risko?</h2>
       <p>
-        El lotaje se calcula usando la fórmula:
-        <br /><br />
-        <code>(Balance * (Riesgo % / 100)) / (Stop Loss * valor del pip)</code>
-        <br /><br />
-        Esta fórmula te permite determinar el tamaño ideal de tu posición para respetar el riesgo máximo definido.
+        Esta calculadora te permite calcular el lotaje óptimo para tus operaciones de trading, basado en:
       </p>
-      <p>
-        Cada activo tiene un valor de pip diferente. Por ejemplo:
-        <br />
-        - XAUUSD = 1<br />
-        - EURUSD = 10<br />
-        - USDJPY = 9.2<br />
-        etc.
-      </p>
+      <ul>
+        <li><strong>Balance:</strong> tu capital disponible.</li>
+        <li><strong>Riesgo:</strong> porcentaje de capital que deseas arriesgar.</li>
+        <li><strong>Stop Loss:</strong> cantidad de pips entre tu entrada y el SL.</li>
+      </ul>
+      <p>Risko fue creada para facilitar la gestión de riesgo y proteger tu capital. 💡</p>
     </div>
   );
 }
