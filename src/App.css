@@ -1,37 +1,39 @@
-/* App.css */
-
+/* src/App.css */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background-color: #0c0819;
-  color: white;
-  text-align: center;
+  color: #fff;
+  min-height: 100vh;
 }
 
-/* Logo */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .logo {
   width: 180px;
   margin: 80px auto 20px;
   display: block;
 }
 
-/* Contenedor principal */
 .container {
   max-width: 400px;
-  margin: 0 auto;
-  padding: 10px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-/* Caja formulario */
 .form-box {
   background-color: #1a0d2d;
   border-radius: 20px;
   padding: 20px;
-  margin-top: 20px;
-  box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
-/* Inputs y select */
 .input,
 select.input,
 button {
@@ -65,147 +67,101 @@ select.input option {
   color: white;
 }
 
-/* Botones */
 .btn {
   background-color: #5d00ff;
   color: white;
   font-weight: 700;
-  text-transform: lowercase;
   font-size: 1rem;
+  text-transform: lowercase;
+  cursor: pointer;
+  border: none;
   padding: 0.8rem;
   border-radius: 10px;
-  border: none;
-  cursor: pointer;
+  display: block;
   width: 100%;
   max-width: 300px;
-  display: block;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
-/* Botón cerrar sesión */
-.btn-outline {
-  background: transparent;
+.logout-btn {
+  background-color: transparent;
   border: 1px solid #ccafff;
   color: white;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.8rem;
+  border-radius: 10px;
   margin-top: 10px;
+  width: 100%;
+  max-width: 300px;
 }
 
-/* Resultado */
 .result {
-  margin-top: 2rem;
   background-color: #1a0d2d;
   padding: 1.5rem;
   border-radius: 15px;
-  border: none;
-  max-width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Etiqueta resultado */
-.result-label {
-  font-size: 1rem;
-  color: white;
-  margin-bottom: 0.6rem;
-  font-weight: 500;
+  max-width: 350px;
+  width: 100%;
+  margin: 0 auto 20px;
   text-align: center;
 }
 
-/* Número del lotaje */
+.result-label {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
 .lotaje {
   font-size: 2rem;
   font-weight: 700;
   color: white;
-  background-color: transparent;
-  border: none;
-  text-align: center;
-  margin: 0 auto;
-  width: 100%;
+  background-color: #1b0e35;
+  border: 1px solid #ccafff;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
   max-width: 300px;
-  padding: 0.4rem 0;
+  margin: 0 auto 1rem;
 }
 
-/* Resultados en línea */
 .row-results {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-top: 1rem;
 }
 
 .mini-result {
   background-color: #1b0e35;
-  border: 1px solid #ccafff;
+  padding: 0.5rem 1rem;
   border-radius: 10px;
-  padding: 10px 14px;
-  min-width: 100px;
-  box-sizing: border-box;
+  border: 1px solid #ccafff;
+  width: 100px;
+  text-align: center;
 }
 
 .mini-label {
-  font-size: 14px;
-  color: #ccafff;
   display: block;
+  font-size: 0.8rem;
+  color: #ccc;
 }
 
 .mini-value {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: white;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
-/* Disclaimer */
 .disclaimer {
-  font-size: 11px;
+  font-size: 10px;
   color: #ffcc00;
-  margin: 20px auto;
-  max-width: 360px;
-  line-height: 1.4;
+  margin: 20px auto 0;
+  max-width: 300px;
   text-align: justify;
+  line-height: 1.4;
 }
 
-/* Créditos */
 .credit {
   font-size: 12px;
-  margin-top: 10px;
   color: #ccafff;
-}
-
-/* Donaciones */
-.donation-box {
-  margin: 2rem auto;
-  max-width: 300px;
-}
-
-.qr-img {
-  width: 200px;
-  margin: 1rem auto;
-  display: block;
-}
-
-.page {
-  padding: 2rem 1rem;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-/* Menú navegación */
-nav {
-  background-color: #1a0d2d;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 400;
-}
-
-nav a.active {
-  font-weight: 700;
-  text-decoration: underline;
+  margin-top: 10px;
+  text-align: center;
 }
