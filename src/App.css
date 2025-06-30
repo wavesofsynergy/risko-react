@@ -1,29 +1,22 @@
-/* src/App.css */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background-color: #0c0819;
   color: #fff;
+  text-align: center;
   min-height: 100vh;
-}
-
-.app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .logo {
   width: 180px;
-  margin: 80px auto 20px;
+  margin: 60px auto 20px;
   display: block;
 }
 
 .container {
-  max-width: 400px;
-  width: 100%;
-  padding: 0 20px;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0 16px;
   box-sizing: border-box;
 }
 
@@ -31,15 +24,13 @@ body {
   background-color: #1a0d2d;
   border-radius: 20px;
   padding: 20px;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .input,
 select.input,
 button {
-  display: block;
   width: 100%;
-  max-width: 300px;
   padding: 12px 16px;
   margin: 10px auto;
   border: 1px solid #ccafff;
@@ -59,7 +50,7 @@ input::placeholder {
 input:focus,
 select:focus {
   outline: none;
-  border-color: #4601fa;
+  border-color: #5d00ff;
 }
 
 select.input option {
@@ -70,98 +61,84 @@ select.input option {
 .btn {
   background-color: #5d00ff;
   color: white;
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: bold;
   text-transform: lowercase;
   cursor: pointer;
   border: none;
-  padding: 0.8rem;
-  border-radius: 10px;
-  display: block;
-  width: 100%;
-  max-width: 300px;
-  margin: 10px auto;
-}
-
-.logout-btn {
-  background-color: transparent;
-  border: 1px solid #ccafff;
-  color: white;
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding: 0.8rem;
+  font-size: 16px;
+  padding: 12px;
   border-radius: 10px;
   margin-top: 10px;
   width: 100%;
-  max-width: 300px;
+}
+
+.btn.logout {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
 }
 
 .result {
   background-color: #1a0d2d;
-  padding: 1.5rem;
-  border-radius: 15px;
-  max-width: 350px;
-  width: 100%;
-  margin: 0 auto 20px;
-  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
 }
 
 .result-label {
   font-size: 1rem;
-  font-weight: 400;
-  margin-bottom: 0.5rem;
+  margin-bottom: 10px;
+}
+
+.result-label strong {
+  font-weight: 700;
 }
 
 .lotaje {
   font-size: 2rem;
   font-weight: 700;
-  color: white;
   background-color: #1b0e35;
   border: 1px solid #ccafff;
+  padding: 0.4rem;
   border-radius: 10px;
-  padding: 0.5rem 1rem;
-  max-width: 300px;
-  margin: 0 auto 1rem;
+  margin: 0 auto 15px;
 }
 
 .row-results {
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 1rem;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .mini-result {
   background-color: #1b0e35;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
   border: 1px solid #ccafff;
-  width: 100px;
-  text-align: center;
+  border-radius: 10px;
+  padding: 8px 12px;
+  width: 48%;
 }
 
 .mini-label {
-  display: block;
   font-size: 0.8rem;
+  display: block;
+  margin-bottom: 4px;
   color: #ccc;
 }
 
 .mini-value {
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: bold;
 }
 
 .disclaimer {
   font-size: 10px;
   color: #ffcc00;
-  margin: 20px auto 0;
-  max-width: 300px;
-  text-align: justify;
+  margin-top: 20px;
   line-height: 1.4;
+  text-align: justify;
 }
 
 .credit {
   font-size: 12px;
   color: #ccafff;
-  margin-top: 10px;
-  text-align: center;
+  margin: 12px 0;
 }
