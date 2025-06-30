@@ -200,3 +200,18 @@ select.input option {
 .nav-link:hover {
   color: #ffcc00;
 }
+
+.howto-text {
+  text-align: justify;
+  font-size: 14px;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+body, html, #root {
+  background-color: #0c0819;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
